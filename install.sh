@@ -1,16 +1,17 @@
 #!/bin/shell
 mkdir -p ~/.config/i3
-ln -sf ~/Source/git/Catpuccin/files/.config/i3/config ~/.config/i3/config
-ln -sf ~/Source/git/Catpuccin/files/.Xresources ~/.Xresources
-ln -s ~/Source/git/Catpuccin/files/Backgrounds/* ~/Pictures/Backgrounds/
-ln -s ~/Source/git/Catpuccin/files/Backgrounds/arch-black-4k.png ~/Pictures/background.png
+ln -sf ~/Source/git/Catppuccin/files/.config/i3/config ~/.config/i3/config
+ln -sf ~/Source/git/Catppuccin/files/.Xresources ~/.Xresources
+ln -s ~/Source/git/Catppuccin/files/Backgrounds/* ~/Pictures/Backgrounds/
+ln -s ~/Source/git/Catppuccin/files/Backgrounds/arch-black-4k.png ~/Pictures/background.png
 sudo mkdir -p /usr/share/backgrounds
-sudo cp ~/Source/git/Catpuccin/files/Backgrounds/arch-black-4k.png /usr/share/backgrounds/background.png
+sudo cp ~/Source/git/Catppuccin/files/Backgrounds/arch-black-4k.png /usr/share/backgrounds/background.png
+sudo cp ~/Source/git/Catppuccin/files/picom.conf /etc/xdg/picom.conf
+sudo cp ~/Source/git/Catppuccin/files/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp ~/Source/git/Catppuccin/files/slick-greeter.conf /etc/lightdm/slick-greeter.conf
+ln -sf ~/Source/git/Catppuccin/files/.config/alacritty/* ~/.config/alacritty/
+git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin/
 
-sudo cp ~/Source/git/dotfiles-and-install-stuff/picom.conf /etc/xdg/picom.conf
-sudo cp ~/Source/git/dotfiles-and-install-stuff/lightdm.conf /etc/lightdm/lightdm.conf
-sudo cp ~/Source/git/dotfiles-and-install-stuff/slick-greeter.conf /etc/lightdm/slick-greeter.conf
-ln -sf ~/Source/git/dotfiles-and-install-stuff/.config/alacritty ~/.config/alacritty
 ln -sf ~/Source/git/dotfiles-and-install-stuff/.zshrc ~/.zshrc
 cp ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/
 cp -r ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/lib/ ~/.oh-my-zsh/themes/
