@@ -4,6 +4,7 @@ ln -sf ~/Source/git/Catppuccin/files/i3 ~/.config/i3/config
 
 ln -sf ~/Source/git/Catppuccin/files/.Xresources ~/.Xresources
 
+mkdir -p ~/Pictures/Backgrounds/
 ln -s ~/Source/git/Catppuccin/files/Backgrounds/* ~/Pictures/Backgrounds/
 ln -s ~/Source/git/Catppuccin/files/Backgrounds/arch-black-4k.png ~/Pictures/background.png
 sudo mkdir -p /usr/share/backgrounds
