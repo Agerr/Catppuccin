@@ -39,10 +39,10 @@ ln -sf ~/Source/git/Catppuccin/files/cava ~/.config/cava/config
 mkdir -p ~/.config/BetterDiscord/themes
 ln -sf ~/Source/git/Catppuccin/files/mocha.theme.css ~/.config/BetterDiscord/themes/mocha.theme.css
 
-sudo chmod a+wr /opt/spotify
-sudo chmod a+wr /opt/spotify/Apps -R
-spicetify backup apply
-curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+# sudo chmod a+wr /opt/spotify
+# sudo chmod a+wr /opt/spotify/Apps -R
+# spicetify backup apply
+# curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
 
 #mkdir -p ~/.config/qt5ct/colors/
 #cp ~/Source/git/dotfiles-and-install-stuff/Dracula-qt5/Dracula.conf ~/.config/qt5ct/colors/

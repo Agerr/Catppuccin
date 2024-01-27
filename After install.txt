@@ -1,0 +1,25 @@
+# GTK, icon theme
+> lxappearance
+
+# QT theme
+> qt5ct
+
+# BetterDiscord
+Log in to discord first
+> betterdiscord-installer
+
+# Xresources
+> xrdb ~/.Xresources
+
+# Spicetify
+> sudo chmod a+wr /opt/spotify
+> sudo chmod a+wr /opt/spotify/Apps -R
+> spicetify backup apply
+> curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+
+# Grub
+> grub-customizer
+Use theme ~/Source/git/Catppuccin/files/grub_theme.tar.gz
+
+# Optional amd TearFree
+> sudo cp ~/Source/git/Catppuccin/files/20-amdgpu.conf /etc/X11/xorg.conf.d/20-amdgpu.conf
