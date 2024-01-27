@@ -1,0 +1,260 @@
+### General stuff ###
+
+# Set Mod key
+set $mod Mod4
+
+# Font
+font pango: JetBrainsMono Nerd Font 10
+
+# Gaps
+gaps inner 10
+gaps outer 10
+
+# No title
+for_window [class="^.*"] border pixel 1
+
+# Autotiling
+exec_always --no-startup-id autotiling
+
+# Compositor
+exec_always --no-startup-id picom
+
+# Background
+exec --no-startup-id feh --bg-fill ~/Pictures/background.png
+
+# Polkit agent
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Lock before suspention / autolock
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
+
+# Startup script
+exec_always --no-startup-id sh ~/.startup.sh
+
+
+
+### Launchers ###
+
+# Application launcher
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher
+
+
+
+### Keybinds ###
+
+# Start terminal
+bindsym $mod+Return exec --no-startup-id alacritty
+
+# Kill window
+bindsym $mod+Shift+q kill
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Restart i3
+bindsym $mod+Shift+r restart
+
+# Exit i3
+bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
+
+# Lock
+bindsym $mod+l exec --no-startup-id i3lock-fancy
+
+# Lock and suspend
+bindsym $mod+Shift+l exec --no-startup-id systemctl suspend
+
+# Shutdown
+bindsym $mod+Shift+s exec --no-startup-id shutdown now
+
+# Fullscreen window
+bindsym $mod+f fullscreen toggle
+
+# Drag floating windows
+floating_modifier $mod
+
+# Change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split horizontally / vertically
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Change layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus: tiling / floating
+bindsym $mod+space focus mode_toggle
+
+# Focus parent window
+bindsym $mod+a focus parent
+
+# Focus child window
+#bindsym $mod+d focus child
+
+# Jump to urgent window
+bindsym $mod+x [urgent=latest] focus
+
+# Change keyboard layout
+bindsym Mod1+Shift+e exec --no-startup-id setxkbmap -layout us
+bindsym Mod1+Shift+l exec --no-startup-id setxkbmap -layout lt
+bindsym Mod1+Shift+r exec --no-startup-id setxkbmap -layout ru
+
+# Screenshot
+bindsym Print exec --no-startup-id flameshot gui
+
+# Color picker
+bindsym Ctrl+Mod1+p exec --no-startup-id gpick -p && pkill gpick && gpick -p
+
+# Toggle redshift
+bindsym $mod+Shift+B exec --no-startup-id pkill -USR1 redshift
+
+# Remove window transparency
+bindsym $mod+Shift+T exec --no-startup-id picom-trans -c 100 &
+
+# App keybinds
+bindsym Ctrl+Mod1+w exec --no-startup-id firefox
+bindsym Ctrl+Mod1+f exec --no-startup-id thunar
+bindsym Ctrl+Mod1+e exec --no-startup-id code
+bindsym Ctrl+Mod1+g exec --no-startup-id gitkraken
+
+
+
+### Workspaces ###
+
+# Workspace variables
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# Switch to workspace with numpad
+bindsym $mod+mod2+KP_1 workspace $ws1
+bindsym $mod+mod2+KP_2 workspace $ws2
+bindsym $mod+mod2+KP_3 workspace $ws3
+bindsym $mod+mod2+KP_4 workspace $ws4
+bindsym $mod+mod2+KP_5 workspace $ws5
+bindsym $mod+mod2+KP_6 workspace $ws6
+bindsym $mod+mod2+KP_7 workspace $ws7
+bindsym $mod+mod2+KP_8 workspace $ws8
+bindsym $mod+mod2+KP_9 workspace $ws9
+bindsym $mod+mod2+KP_0 workspace $ws10
+
+# Move window to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Resize window
+mode "resize" {
+        bindsym Left resize shrink width 30 px or 30 ppt
+        bindsym Down resize grow height 30 px or 30 ppt
+        bindsym Up resize shrink height 30 px or 30 ppt
+        bindsym Right resize grow width 30 px or 30 ppt
+
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# Assigning windows to workspaces
+
+# (1) terminals
+assign [class="Alacritty"] $ws1
+
+# (2) discord
+assign [class="discord"] $ws2
+
+# (3) main
+assign [class="Code"] $ws3
+
+# (4) firefox
+for_window [class="firefox"] move container to workspace $ws4
+
+# (5) thunar
+assign [class="Thunar"] $ws5
+
+# (6) git
+assign [class="GitKraken"] $ws6
+
+# (7) non
+
+# (8) non
+
+# (9) non
+
+# (10) spotify
+for_window [class="Spotify"] move container to workspace $ws10
+
+
+
+### Special windows ###
+
+# Testing windows
+for_window [title="_test_"] floating enable
+for_window [title="_test_"] move position center
+for_window [title="_test_"] border normal
+
+# Special floating windows
+for_window [class="feh"] floating enable
+for_window [class="googlecalendardark-nativefier-e22938"] floating enable
+for_window [class="cutefish-calculator"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Gpick"] floating enable
+
+
+
+### Theme (catppuccin-mocha) ###
+
+# WM theme
+# target                 title    bg        text      indicator border
+client.focused           #f5c2e7  #1e1e2e   #cdd6f4   #f5e0dc   #f5c2e7
+client.focused_inactive  #cba6f7  #1e1e2e   #cdd6f4   #f5e0dc   #cba6f7
+client.unfocused         #cba6f7  #1e1e2e   #cdd6f4   #f5e0dc   #cba6f7
+client.urgent            #fab387  #1e1e2e   #fab387   #6c7086   #fab387
+client.placeholder       #6c7086  #1e1e2e   #cdd6f4   #6c7086   #6c7086
+client.background        #1e1e2e
