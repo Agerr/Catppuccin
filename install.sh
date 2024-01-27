@@ -16,11 +16,13 @@ sudo cp ~/Source/git/Catppuccin/files/lightdm.conf /etc/lightdm/lightdm.conf
 
 sudo cp ~/Source/git/Catppuccin/files/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 
+mkdir -p ~/.config/polybar
 ln -sf ~/Source/git/Catppuccin/files/polybar/* ~/.config/polybar/
 
 mkdir -p ~/.config/rofi
 ln -sf ~/Source/git/Catppuccin/files/rofi/* ~/.config/rofi/
 
+mkdir -o ~/.config/alacritty
 ln -sf ~/Source/git/Catppuccin/files/alacritty/* ~/.config/alacritty/
 git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin/
 
@@ -29,8 +31,10 @@ curl -o ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh https://raw.githubus
 #cp ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/
 #cp -r ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/lib/ ~/.oh-my-zsh/themes/
 
+mkdir -p ~/.config/dunst
 ln -sf ~/Source/git/Catppuccin/files/dunstrc ~/.config/dunst/dunstrc
 
+mkdir -p ~/.config/cava
 ln -sf ~/Source/git/Catppuccin/files/cava ~/.config/cava/config
 
 mkdir -p ~/.config/BetterDiscord/themes
