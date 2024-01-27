@@ -11,11 +11,12 @@ sudo cp ~/Source/git/Catppuccin/files/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp ~/Source/git/Catppuccin/files/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 ln -sf ~/Source/git/Catppuccin/files/.config/alacritty/* ~/.config/alacritty/
 git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin/
+ln -sf ~/Source/git/Catppuccin/files/.zshrc ~/.zshrc
+curl -o ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+#cp ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/
+#cp -r ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/lib/ ~/.oh-my-zsh/themes/
+ln -sf ~/Source/git/Catppuccin/files/.config/dunstrc ~/.config/dunst/dunstrc
 
-ln -sf ~/Source/git/dotfiles-and-install-stuff/.zshrc ~/.zshrc
-cp ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/
-cp -r ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/lib/ ~/.oh-my-zsh/themes/
-ln -sf ~/Source/git/dotfiles-and-install-stuff/.config/dunst ~/.config/dunst
 ln -sf ~/Source/git/dotfiles-and-install-stuff/.config/cava ~/.config/cava
 mkdir -p ~/.config/BetterDiscord/themes
 ln -sf ~/Source/git/dotfiles-and-install-stuff/.config/BetterDiscord/themes/dracula.theme.css ~/.config/BetterDiscord/themes/dracula.theme.css
