@@ -21,5 +21,5 @@ Log in to discord first
 > grub-customizer
 Use theme ~/Source/git/Catppuccin/files/grub_theme.tar.gz
 
-# Optional amd TearFree
+# Optional AMD TearFree
 > sudo cp ~/Source/git/Catppuccin/files/20-amdgpu.conf /etc/X11/xorg.conf.d/20-amdgpu.conf
