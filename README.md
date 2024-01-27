@@ -1,1 +1,1 @@
-# My catpuccin config
+# My Catpuccin Config
