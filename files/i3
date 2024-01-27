@@ -4,7 +4,7 @@
 set $mod Mod4
 
 # Font
-font pango: JetBrainsMono Nerd Font 10
+font pango: JetBrains Mono 10
 
 # Gaps
 gaps inner 10
