@@ -27,9 +27,8 @@ ln -sf ~/Source/git/Catppuccin/files/alacritty/* ~/.config/alacritty/
 git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin/
 
 ln -sf ~/Source/git/Catppuccin/files/.zshrc ~/.zshrc
+mkdir -p ~/.zsh
 curl -o ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
-#cp ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/
-#cp -r ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/lib/ ~/.oh-my-zsh/themes/
 
 mkdir -p ~/.config/dunst
 ln -sf ~/Source/git/Catppuccin/files/dunstrc ~/.config/dunst/dunstrc
