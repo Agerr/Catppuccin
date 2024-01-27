@@ -22,7 +22,7 @@ ln -sf ~/Source/git/Catppuccin/files/polybar/* ~/.config/polybar/
 mkdir -p ~/.config/rofi
 ln -sf ~/Source/git/Catppuccin/files/rofi/* ~/.config/rofi/
 
-mkdir -o ~/.config/alacritty
+mkdir -p ~/.config/alacritty
 ln -sf ~/Source/git/Catppuccin/files/alacritty/* ~/.config/alacritty/
 git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin/
 
