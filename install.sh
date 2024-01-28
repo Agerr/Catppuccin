@@ -39,7 +39,7 @@ ln -sf ~/Source/git/Catppuccin/files/cava ~/.config/cava/config
 mkdir -p ~/.config/BetterDiscord/themes
 ln -sf ~/Source/git/Catppuccin/files/mocha.theme.css ~/.config/BetterDiscord/themes/mocha.theme.css
 
-#mkdir -p ~/.config/qt5ct/colors/
-#cp ~/Source/git/dotfiles-and-install-stuff/Dracula-qt5/Dracula.conf ~/.config/qt5ct/colors/
+mkdir -p ~/.config/qt5ct/colors/
+curl -o ~/.config/qt5ct/colors/Catppuccin-Mocha.conf https://raw.githubusercontent.com/catppuccin/qt5ct/main/themes/Catppuccin-Mocha.conf
 
 ln -sf ~/Source/git/Catppuccin/files/.startup.sh ~/.startup.sh
