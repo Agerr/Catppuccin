@@ -8,6 +8,8 @@
 Log in to discord first
 > betterdiscord-installer
 
+# Import stylus.json to Firefox Stylus extension
+
 # Xresources
 > xrdb ~/.Xresources
 
