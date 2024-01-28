@@ -5,6 +5,7 @@ paru -S --noconfirm catppuccin-gtk-theme-mocha catppuccin-cursors-mocha papirus-
 sudo systemctl enable numLockOnTty.service
 sudo systemctl enable lightdm.service
 sudo systemctl enable cronie.service
+sudo systemctl enable bluetooth.service
 xdg-user-dirs-update
 echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee --append /etc/environment
 papirus-folders -C cat-mocha-mauve --theme Papirus-Dark
