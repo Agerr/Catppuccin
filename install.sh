@@ -36,6 +36,9 @@ ln -sf ~/Source/git/Catppuccin/files/dunstrc ~/.config/dunst/dunstrc
 mkdir -p ~/.config/cava
 ln -sf ~/Source/git/Catppuccin/files/cava ~/.config/cava/config
 
+mkdir -p ~/.config/redshift
+ln -sf ~/Source/git/Catppuccin/files/redshift.conf ~/.config/redshift/redshift.conf
+
 mkdir -p ~/.config/BetterDiscord/themes
 ln -sf ~/Source/git/Catppuccin/files/mocha.theme.css ~/.config/BetterDiscord/themes/mocha.theme.css
 
